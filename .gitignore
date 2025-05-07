@@ -1,1 +1,3 @@
 Env.class.php
+database/migrations/database.sqlite3
+database/migrations/migrated.log

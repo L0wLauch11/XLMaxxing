@@ -1,0 +1,7 @@
+.accent-100 {
+    color: var(--color-accent);
+}
+
+.bg-accent-100 {
+    background-color: var(--color-accent);
+}

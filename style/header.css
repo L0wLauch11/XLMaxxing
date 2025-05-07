@@ -1,0 +1,14 @@
+header {
+    background-color: var(--color-foreground);
+    padding: 8px;
+    outline: 1px solid var(--color-highlight);
+}
+
+header ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+header ul h1 {
+    margin: 0;
+}

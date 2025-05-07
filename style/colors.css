@@ -1,0 +1,7 @@
+:root {
+    --color-background: rgb(25, 25, 25);
+    --color-foreground: rgb(40, 40, 40);
+    --color-highlight: rgb(80, 80, 80);
+    --color-text: rgb(205, 205, 205);
+    --color-accent: rgb(99, 186, 96);
+}

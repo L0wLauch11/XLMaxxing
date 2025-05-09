@@ -4,4 +4,6 @@
     --color-highlight: rgb(80, 80, 80);
     --color-text: rgb(205, 205, 205);
     --color-accent: rgb(99, 186, 96);
+
+    --rounding-radius: 4px;
 }

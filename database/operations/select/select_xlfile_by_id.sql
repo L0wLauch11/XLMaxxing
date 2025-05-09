@@ -1,0 +1,1 @@
+SELECT * FROM `xlfiles` WHERE id=$id;

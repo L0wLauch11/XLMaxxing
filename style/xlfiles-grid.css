@@ -1,0 +1,30 @@
+.xlfiles-grid-entry {
+    display: inline-block;
+    padding: 0px;
+    margin: 12px;
+    width: 220px;
+    height: 220px;
+    max-height: 220px;
+    background-color: var(--color-foreground);
+    outline: 1px solid var(--color-highlight);
+    border-radius: var(--rounding-radius);
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.xlfiles-grid-entry-thumbnail {
+    width: 220px;
+    height: 140px;
+}
+
+.xlfiles-grid-text {
+    margin: 0;
+    padding: 0 4px;
+    overflow: clip;
+    max-height: 100%;
+    border-radius: var(--rounding-radius);
+}
+
+.xlfiles-grid-name {
+    font-weight: bold;
+}

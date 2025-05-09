@@ -1,14 +1,11 @@
 <?php
+/// This file is the `entry-point`.
 
+// Requiring these in the `routes.php` file also loads them for every other page
+// which is a nice side effect, that acts like an autoload
 require_once 'Router.class.php';
 require_once 'setup.php';
 
-foreach ($siteRoutes as $siteRoute => $siteRouteFolder) {
-    Router::get($siteRoute, function($sitePath) use ($siteRouteFolder) {
-        $siteFolder = $siteRouteFolder;
-        include_once 'sites/templates/site.php';
-    });
-}
-
-Router::get('/', 'index.php');
-
+Router::get('/', 'views/templates/page.php');
+Router::get('/$pageName', 'views/templates/page.php');
+Router::get('/$pageName/$id', 'views/templates/page.php');

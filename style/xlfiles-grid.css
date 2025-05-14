@@ -1,25 +1,45 @@
+.xlfiles-grid {
+    text-align: center;
+}
+
 .xlfiles-grid-entry {
     display: inline-block;
+    text-align: left;
     padding: 0px;
     margin: 12px;
-    width: 220px;
-    height: 220px;
-    max-height: 220px;
+    width: 280px;
+    height: 250px;
     background-color: var(--color-foreground);
     outline: 1px solid var(--color-highlight);
     border-radius: var(--rounding-radius);
     overflow: hidden;
     text-decoration: none;
+    color: var(--color-text);
+    box-shadow: inset 0 -8px 32px rgba(255, 255, 255, 0.05);
+
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 12px;
+    border-style: solid;
+    border-color: #313131; /* TODO: Do not rely on this color-hack */
+
+    transition: 0.3s;
+}
+
+.xlfiles-grid-entry:hover {
+    scale: 1.05;
+    box-shadow: inset 0 -8px 32px rgba(255, 255, 255, 0.05), 8px 0px 30px rgba(0, 0, 0, 0.5);
 }
 
 .xlfiles-grid-entry-thumbnail {
-    width: 220px;
+    width: 280px;
     height: 140px;
 }
 
 .xlfiles-grid-text {
     margin: 0;
-    padding: 0 4px;
+    padding: 10px 14px;
     overflow: clip;
     max-height: 100%;
     border-radius: var(--rounding-radius);
@@ -27,4 +47,6 @@
 
 .xlfiles-grid-name {
     font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
 }

@@ -12,7 +12,11 @@ class Page {
     }
 
     public function renderSection(string $sectionName) {
-        $sectionContent = call_user_func($sectionName, $this->properties);
-        return $sectionContent;
+        if (is_callable($sectionName)) {
+            $sectionContent = call_user_func($sectionName, $this->properties);
+            return $sectionContent;
+        }
+        
+        return '';
     }
 }

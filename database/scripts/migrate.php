@@ -26,19 +26,27 @@ $migrations = [
     '2025-05-07_DEV_populate_xlfiles'
 ];
 
-$migrationCount = 0;
+if (!file_exists($migratedLogPath)) {
+    touch($migratedLogPath);
+}
 
+$migrationCount = 0;
 foreach ($migrations as $migration) {
     $migrationEnvMode = str_contains($migration, "DEV") ? "DEV" : "PROD";
+    $executedMigrations = file($migratedLogPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
     if (($migrationEnvMode == "DEV" && !Env::DEV_ENV)
-            || str_contains(file_get_contents($migratedLogPath), $migration)) {
+            || in_array($migration, $executedMigrations)) {
         continue;
     }
 
-    file_put_contents($migratedLogPath, "$migration,", FILE_APPEND);
-
-    $database->query(file_get_contents("$migrationsFolder/$migration.sql"));
-    print("$migrationEnvMode migration `$migration.sql` executed.\n");
+    try {
+        $database->query(file_get_contents("$migrationsFolder/$migration.sql"));
+        file_put_contents($migratedLogPath, "$migration\n", FILE_APPEND);
+        print("$migrationEnvMode migration `$migration.sql` executed.\n");
+    } catch (Exception $e) {
+        print("Error in `$migration.sql`!: {$e->getMessage()}\n");
+    }
 
     $migrationCount++;
 }

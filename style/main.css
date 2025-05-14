@@ -1,13 +1,13 @@
 @font-face {
-    font-family: RobotoSlab;
-    src: url("/asset/font/RobotoSlab.ttf");
+    font-family: RobotoVariable;
+    src: url('/asset/font/RobotoVariable.ttf');
 }
 
 html {
     background-color: var(--color-background);
     color: var(--color-text);
-
-    font-family: 'RobotoSlab';
+    font-family: 'RobotoVariable';
+    font-weight: 400;
 }
 
 body {
@@ -19,6 +19,10 @@ main {
     max-width: 1392px;
     display: block;
     margin: 0 auto;
+}
+
+a {
+    color: turquoise;
 }
 
 .text-center {

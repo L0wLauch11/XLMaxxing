@@ -1,3 +1,9 @@
 Env.class.php
+
 database/migrations/database.sqlite3
+database/migrations/database.sqlite3-pöd
 database/migrations/migrated.log
+database/migrations/migrated.log.old
+
+asset/spreadsheets/*
+!asset/spreadsheets/.gitkeep

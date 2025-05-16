@@ -24,10 +24,11 @@ main {
     max-width: 1392px;
     display: block;
     margin: 0 auto;
+    padding: 0 32px;
 }
 
 a {
-    color: turquoise;
+    color: var(--color-accent);
 }
 
 .text-center {

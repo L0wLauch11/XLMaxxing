@@ -23,10 +23,8 @@ require_once Env::ROOT."/views/$pageName.php";
 <body>
     <header>
         <ul>
-            <a href="/" style="text-decoration: none;"><h1 class="accent-100">XLMaxxing</h1></a>
-            <!-- <li>
-                <a href="/">Spreadsheets</a>
-            </li> -->
+            <a href="/" style="text-decoration: none;"><h1>XLMaxxing</h1></a>
+            <a href="/login"></a>
         </ul>
     </header>
 

@@ -1,9 +1,10 @@
 :root {
     --color-background: rgb(25, 25, 25);
-    --color-foreground: rgb(40, 40, 40);
+    --color-foreground: rgb(30, 30, 30);
     --color-highlight: rgb(80, 80, 80);
     --color-text: rgb(205, 205, 205);
     --color-accent: rgb(99, 186, 96);
 
     --rounding-radius: 4px;
+    --animation-speed: 0.3s;
 }

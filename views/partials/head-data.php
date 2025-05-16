@@ -10,7 +10,9 @@ $stylesheetsCascading = [
     'main',
     'header',
     'xlfiles-grid',
-    'subtext'
+    'xlfile',
+    'subtext',
+    'button'
 ];
 ?>
 

@@ -2,6 +2,7 @@
 $xlfileLanguage = $props['xlfileLanguage'];
 $supportedSoftware = $props['supportedSoftware'];
 
+$compactView ??= false;
 $compactViewClass = $compactView ? ' subtext-compact' : '';
 ?>
 
@@ -11,6 +12,12 @@ $compactViewClass = $compactView ? ' subtext-compact' : '';
     &middot;
     <span class="<?= $compactViewClass; ?>">
         <img class="subtext-icon<?= $compactViewClass; ?>" src="/assets/img/icons/document.svg" alt="" srcset="">
-        <?= $supportedSoftware['name']; ?>
+        <?php if ($compactView): ?>
+            <?= $supportedSoftware['name']; ?>
+        <?php else: ?>
+            <a href="<?= $supportedSoftware['url']; ?>">
+                <?= $supportedSoftware['name']; ?>
+            </a>
+        <?php endif; ?>
     </span>
 </p>

@@ -1,0 +1,12 @@
+.button {
+    background-color: var(--color-accent);
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: var(--color-background);
+    text-decoration: none;
+    transition: var(--animation-speed);
+}
+
+.button:hover {
+    background-color: color-mix(in srgb, var(--color-accent) 70%, white 30%);
+}

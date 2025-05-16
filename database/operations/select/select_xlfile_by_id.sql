@@ -1,1 +1,1 @@
-SELECT * FROM `xlfiles` WHERE id=$id;
+SELECT * FROM "xlfiles" WHERE id=$id;

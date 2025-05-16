@@ -1,1 +1,1 @@
-SELECT * FROM `xlfiles`;
+SELECT * FROM "xlfiles";

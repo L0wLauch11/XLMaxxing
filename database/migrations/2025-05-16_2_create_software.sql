@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS "software" (
+	"id"	INTEGER NOT NULL,
+	"name"	TEXT NOT NULL,
+	"free"	BOOLEAN,
+	"url"	INTEGER,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);

@@ -1,4 +1,4 @@
-<?php
+<?php /*** Copy this file to `Env.class.php` ***/
 
 class Env {
     const DATABASE_FILE = 'database.sqlite3';

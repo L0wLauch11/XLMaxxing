@@ -1,0 +1,1 @@
+SELECT * FROM "software" WHERE id=$id;

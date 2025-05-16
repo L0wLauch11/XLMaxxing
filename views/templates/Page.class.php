@@ -7,7 +7,7 @@ class Page {
         $this->properties = $properties;
     }
 
-    public function props() : array {
+    public function props(): array {
         return $this->properties;
     }
 

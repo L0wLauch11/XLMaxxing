@@ -21,10 +21,7 @@ $database = new SQLite3("$databaseFolder/".Env::DATABASE_FILE, SQLITE3_OPEN_CREA
 $database->enableExceptions(true);
 
 // Migrations are read like this: `/database/migrations/<$migrations[i]>.sql`
-$migrations = [
-    '2025-05-06_create_xlfiles',
-    '2025-05-07_DEV_populate_xlfiles'
-];
+$migrations = glob("$migrationsFolder/*.{sql}", GLOB_BRACE);
 
 if (!file_exists($migratedLogPath)) {
     touch($migratedLogPath);
@@ -33,19 +30,20 @@ if (!file_exists($migratedLogPath)) {
 $migrationCount = 0;
 foreach ($migrations as $migration) {
     $migrationEnvMode = str_contains($migration, "DEV") ? "DEV" : "PROD";
+    $migrationName = basename($migration);
     $executedMigrations = file($migratedLogPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
     if (($migrationEnvMode == "DEV" && !Env::DEV_ENV)
-            || in_array($migration, $executedMigrations)) {
+            || in_array(basename($migration), $executedMigrations)) {
         continue;
     }
 
     try {
-        $database->query(file_get_contents("$migrationsFolder/$migration.sql"));
-        file_put_contents($migratedLogPath, "$migration\n", FILE_APPEND);
-        print("$migrationEnvMode migration `$migration.sql` executed.\n");
+        $database->query(file_get_contents($migration));
+        file_put_contents($migratedLogPath, "{$migrationName}\n", FILE_APPEND);
+        print("$migrationEnvMode migration `$migrationName` executed.\n");
     } catch (Exception $e) {
-        print("Error in `$migration.sql`!: {$e->getMessage()}\n");
+        print("Error in `$migrationName`!: {$e->getMessage()}\n");
     }
 
     $migrationCount++;

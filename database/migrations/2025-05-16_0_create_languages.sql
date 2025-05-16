@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS "languages" (
+	"id"	INTEGER NOT NULL,
+	"shortcode"	VARCHAR(2) NOT NULL UNIQUE,
+	"name"	TEXT,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);

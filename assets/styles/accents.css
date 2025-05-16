@@ -2,6 +2,10 @@
     color: var(--color-accent);
 }
 
+.accent-50 {
+    color: color-mix(in srgb, var(--color-accent) 50%, black 50%);
+}
+
 .bg-accent-100 {
     background-color: var(--color-accent);
 }

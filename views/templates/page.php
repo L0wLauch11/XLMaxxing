@@ -23,8 +23,13 @@ require_once Env::ROOT."/views/$pageName.php";
 <body>
     <header>
         <ul>
-            <a href="/" style="text-decoration: none;"><h1>XLMaxxing</h1></a>
-            <a href="/login"></a>
+            <li><a href="/" style="text-decoration: none;"><h1>XLMaxxing</h1></a></li>
+            <li>
+                <a class="login button" href="/login">
+                    <img src="/assets/img/icons/key.svg" alt="">
+                    <span>Login</span>
+                </a>
+            </li>
         </ul>
     </header>
 

@@ -8,11 +8,13 @@ $stylesheetsCascading = [
     'theme',
     'accents',
     'main',
-    'header',
-    'xlfiles-grid',
-    'xlfile',
-    'subtext',
-    'button'
+    'components/header',
+    'components/container',
+    'components/xlfiles-grid',
+    'components/xlfile',
+    'components/subtext',
+    'components/button',
+    'components/auth-form'
 ];
 ?>
 

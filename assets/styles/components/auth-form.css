@@ -1,0 +1,51 @@
+.cotainer-auth-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.auth-form input {
+    display: block;
+    margin: 16px 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    border-style: none;
+    background-color: var(--color-background);
+    padding: 12px 16px;
+    border-radius: var(--rounding-radius);
+    outline: 1px solid var(--color-highlight);
+
+    color: var(--color-text);
+    font-family: inherit;
+    font-size: inherit;
+
+    transition: var(--animation-speed);
+}
+
+.auth-form input:focus {
+    outline-color: var(--color-accent);
+}
+
+.input-descriptor {
+    background-color: var(--color-foreground);
+    margin-bottom: -26px;
+    margin-left: 16px;
+    color: var(--color-highlight);
+    display: block;
+    z-index: 111;
+    position:relative;
+    width: fit-content;
+
+    /* Goated CSS Hack */
+    background: linear-gradient(180deg,var(--color-foreground) 0%, var(--color-foreground) 48%, var(--color-background) 2%);
+}
+
+.input-descriptor {
+    transition: var(--animation-speed);
+    opacity: 0%;
+}
+
+.advanced-input-wrapper:has(input:focus) label {
+    color: var(--color-accent);
+    opacity: 100%;
+}

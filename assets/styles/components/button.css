@@ -1,12 +1,25 @@
+button {
+    border-style: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
 .button {
     background-color: var(--color-accent);
     border-radius: 4px;
-    padding: 4px 8px;
+    padding: 8px 16px;
     color: var(--color-background);
     text-decoration: none;
     transition: var(--animation-speed);
+    display: inline-block;
+    margin: 8px 0;
+    float: none;
 }
 
 .button:hover {
     background-color: color-mix(in srgb, var(--color-accent) 70%, white 30%);
+}
+
+.button-submit {
+    float: right;
 }

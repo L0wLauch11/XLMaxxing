@@ -16,7 +16,7 @@ require_once Env::ROOT."/views/$pageName.php";
 ?>
 
 <head>
-    <?php include Env::ROOT.'/head-data.php'; ?>
+    <?= renderPartial('head-data'); ?>
     <?= $page->renderSection('sectionTitle'); ?>
 </head>
 

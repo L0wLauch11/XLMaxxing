@@ -2,6 +2,7 @@
     color: rgb(115, 115, 115);
     font-size: 85%;
     font-family: 'RobotoMono';
+    font-weight: bold;
     margin-top: -12px;
 }
 
@@ -10,4 +11,20 @@
     vertical-align: middle;
     filter: invert(45%); /* 115 div by 255 */
     padding-bottom: 3px;
+}
+
+.subtext-icon.subtext-compact {
+    width: 14px;
+    margin-right: -4px;
+}
+
+.subtext.subtext-compact {
+    font-weight: normal;
+    font-size: 75%;
+}
+
+.subtext-info-container-index > .subtext {
+    margin-left: 12px;
+    margin-top: 4px;
+    margin-bottom: -4px;
 }

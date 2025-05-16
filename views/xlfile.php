@@ -26,7 +26,10 @@ $page->passProps(
     ?>
     
     <h1><?= $xlfile['name']; ?></h1>
-    <?= renderPartial('subtext-xlfile-info', compact('props')); ?>
+    <?= renderPartial('subtext-xlfile-info', [
+        'props' => $props,
+        'compactView' => false,
+    ]); ?>
     
     <p><?= $xlfile['description']; ?></p>
 

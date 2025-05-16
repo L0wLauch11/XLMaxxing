@@ -1,13 +1,16 @@
 <?php
 $xlfileLanguage = $props['xlfileLanguage'];
 $supportedSoftware = $props['supportedSoftware'];
+
+$compactViewClass = $compactView ? ' subtext-compact' : '';
 ?>
 
-<p class="subtext">
-    <img class="subtext-icon" src="/assets/img/icons/language.svg" alt="" srcset="">
+<p class="subtext<?= $compactViewClass; ?>">
+    <img class="subtext-icon<?= $compactViewClass; ?>" src="/assets/img/icons/language.svg" alt="" srcset="">
     <?= $xlfileLanguage['name']; ?>
     &middot;
-    <?= $supportedSoftware['free'] ? '<span class="accent-100">' : '<span>'; ?>
+    <span class="<?= $compactViewClass; ?>">
+        <img class="subtext-icon<?= $compactViewClass; ?>" src="/assets/img/icons/document.svg" alt="" srcset="">
         <?= $supportedSoftware['name']; ?>
     </span>
 </p>

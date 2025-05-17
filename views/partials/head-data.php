@@ -16,6 +16,8 @@ $stylesheetsCascading = [
     'components/button',
     'components/auth-form',
     'components/input',
+    'components/screenshot',
+    'components/spacer',
 ];
 ?>
 

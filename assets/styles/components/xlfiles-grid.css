@@ -9,21 +9,13 @@
     padding: 0px;
     margin: 15px;
     width: 280px;
-    height: 250px;
+    height: 262px;
     background-color: var(--color-foreground);
-    outline: 1px solid var(--color-highlight);
+    outline: var(--default-outline);
     border-radius: var(--rounding-radius);
     overflow: hidden;
     text-decoration: none;
     color: var(--color-text);
-    box-shadow: inset 0 -8px 32px rgba(255, 255, 255, 0.05);
-
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    border-bottom: 12px;
-    border-style: solid;
-    border-color: rgb(38, 38, 38); /* TODO: Do not rely on this color-hack */
     box-shadow: inset 0 -8px 32px rgba(255, 255, 255, 0.05), 8px 0px 30px rgba(0, 0, 0, 0.5);
 
     transition: var(--animation-speed);
@@ -44,8 +36,10 @@
     margin: 0;
     padding: 10px 14px;
     overflow: clip;
-    max-height: 100%;
     border-radius: var(--rounding-radius);
+    height: 100%;
+    
+    mask-image: linear-gradient(0deg, transparent 190px, rgb(0, 0, 0) 200px);
 }
 
 .xlfiles-grid-name {

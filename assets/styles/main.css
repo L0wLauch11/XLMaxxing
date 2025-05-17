@@ -33,3 +33,15 @@ a {
 .text-center {
     text-align: center;
 }
+
+h3 {
+    margin-bottom: -16px;
+    color: rgb(115, 115, 115);
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'RobotoMono';
+}
+
+.gray-text {
+    color: rgb(115, 115, 115);
+}

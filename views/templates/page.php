@@ -31,7 +31,7 @@ require_once Env::ROOT."/views/$pageName.php";
             </li>
             <li>
                 <a class="login button" href="/login">
-                    <img src="/assets/img/icons/key.svg" alt=""><span><?= tl('Login') ?></span>
+                    <img src="/assets/img/icons/key.svg" alt="">&nbsp;<span><?= tl('Login') ?></span>
                 </a>
             </li>
         </ul>

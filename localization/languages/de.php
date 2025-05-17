@@ -1,10 +1,16 @@
 <?php
 
 return [
+    // Generic
     'German' => 'Deutsch',
     'English' => 'Englisch',
 
+    // Search bar
     'Search' => 'Suchen',
+
+    // xlfile page
+    'Description' => 'Beschreibung',
+    'Usage instructions' => 'Anleitung zur Verwendung',
 
     // Register/Login Pages
     'Register' => 'Registrieren',

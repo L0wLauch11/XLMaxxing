@@ -1,0 +1,15 @@
+.screenshot {
+    width: 425px;
+    height: 300px;
+
+    margin-bottom: 16px;
+    border-radius: var(--rounding-radius);
+    outline: var(--default-outline);
+}
+
+.screenshot-big {
+    width: 500px;
+    height: 350px;
+
+    display: inline-block;
+}

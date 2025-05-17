@@ -16,8 +16,8 @@ require_once Env::ROOT."/views/$pageName.php";
 ?>
 
 <head>
-    <?= renderPartial('head-data'); ?>
-    <?= $page->renderSection('sectionTitle'); ?>
+    <?= renderPartial('head-data') ?>
+    <?= $page->renderSection('sectionTitle') ?>
 </head>
 
 <body>
@@ -34,7 +34,7 @@ require_once Env::ROOT."/views/$pageName.php";
     </header>
 
     <main>
-        <?= $page->renderSection('sectionMain'); ?>
+        <?= $page->renderSection('sectionMain') ?>
     </main>
 </body>
 

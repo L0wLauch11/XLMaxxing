@@ -17,7 +17,7 @@ $page->passProps(
     $xlfile = $props['xlfile'];
     ?>
 
-    <title>XLFile &mdash; <?= $xlfile['name']; ?></title>
+    <title>XLFile &mdash; <?= $xlfile['name'] ?></title>
 <?php } ?>
 
 
@@ -26,29 +26,29 @@ $page->passProps(
     ?>
     
     <div class="container">
-        <h1><?= $xlfile['name']; ?></h1>
+        <h1><?= $xlfile['name'] ?></h1>
         
         <?= renderPartial('subtext-xlfile-info', [
             'props' => $props,
             'compactView' => false,
-        ]); ?>
+        ]) ?>
         
-        <p><?= $xlfile['description']; ?></p>
-
+        <p><?= $xlfile['description'] ?></p>
+        
         <?php
         $spreadsheetsPath = Env::ROOT."/assets/spreadsheets/{$xlfile['id']}";
         $spreadsheets = glob("$spreadsheetsPath.{ods,csv,xls,xlsx,gsheet,xlsb,xlsm,xlt,xltx,numbers}", GLOB_BRACE);
         ?>
 
         <?php foreach ($spreadsheets as $spreadsheet): ?>
-            <?php $spreadsheetExtension = explode('.', basename($spreadsheet))[1]; ?>
+            <?php $spreadsheetExtension = explode('.', basename($spreadsheet))[1] ?>
             <a
-                href="/assets/spreadsheets/<?= basename($spreadsheet); ?>"
-                download="<?= $xlfile['name']; ?>.<?= $spreadsheetExtension; ?>"
+                href="/assets/spreadsheets/<?= basename($spreadsheet) ?>"
+                download="<?= $xlfile['name'] ?>.<?= $spreadsheetExtension ?>"
                 class="button"
             >
-            Download <b><?= "{$xlfile['name']}.$spreadsheetExtension"; ?></b>
+            Download <b><?= "{$xlfile['name']}.$spreadsheetExtension" ?></b>
             </a>
-        <?php endforeach; ?>
+        <?php endforeach ?>
     </div>
 <?php } ?>

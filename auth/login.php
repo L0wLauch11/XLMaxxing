@@ -7,6 +7,6 @@
 </head>
 <body>
     Login ->
-    <?php print_r($_POST); ?>
+    <?php print_r($_POST) ?>
 </body>
 </html>

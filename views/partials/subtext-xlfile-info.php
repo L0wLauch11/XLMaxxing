@@ -6,18 +6,18 @@ $compactView ??= false;
 $compactViewClass = $compactView ? ' subtext-compact' : '';
 ?>
 
-<p class="subtext<?= $compactViewClass; ?>">
-    <img class="subtext-icon<?= $compactViewClass; ?>" src="/assets/img/icons/language.svg" alt="" srcset="">
-    <?= $xlfileLanguage['name']; ?>
+<p class="subtext<?= $compactViewClass ?>">
+    <img class="subtext-icon<?= $compactViewClass ?>" src="/assets/img/icons/language.svg" alt="" srcset="">
+    <?= $xlfileLanguage['name'] ?>
     &middot;
-    <span class="<?= $compactViewClass; ?>">
-        <img class="subtext-icon<?= $compactViewClass; ?>" src="/assets/img/icons/document.svg" alt="" srcset="">
+    <span class="<?= $compactViewClass ?>">
+        <img class="subtext-icon<?= $compactViewClass ?>" src="/assets/img/icons/document.svg" alt="" srcset="">
         <?php if ($compactView): ?>
-            <?= $supportedSoftware['name']; ?>
+            <?= $supportedSoftware['name'] ?>
         <?php else: ?>
-            <a href="<?= $supportedSoftware['url']; ?>">
-                <?= $supportedSoftware['name']; ?>
+            <a href="<?= $supportedSoftware['url'] ?>">
+                <?= $supportedSoftware['name'] ?>
             </a>
-        <?php endif; ?>
+        <?php endif ?>
     </span>
 </p>

@@ -1,10 +1,10 @@
 <div class="advanced-input-wrapper">
-    <label for="<?= $name; ?>" class="input-descriptor"><?= $placeholderText; ?></label>
+    <label for="<?= $name ?>" class="input-descriptor"><?= tl($placeholderText) ?></label>
     <input
-        type="<?= $type; ?>" name="<?= $name; ?>" id="<?= $name; ?>"
+        type="<?= $type ?>" name="<?= $name ?>" id="<?= $name ?>"
 
-        placeholder="<?= $placeholderText; ?>"
+        placeholder="<?= tl($placeholderText) ?>"
         onfocus="this.placeholder=''"
-        onblur="this.placeholder='<?= $placeholderText; ?>'"
+        onblur="this.placeholder='<?= tl($placeholderText) ?>'"
     >
 </div>

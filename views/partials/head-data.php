@@ -19,5 +19,5 @@ $stylesheetsCascading = [
 ?>
 
 <?php foreach ($stylesheetsCascading as $stylesheet): ?>
-    <link rel="stylesheet" href="/assets/styles/<?= $stylesheet; ?>.css">
-<?php endforeach; ?>
+    <link rel="stylesheet" href="/assets/styles/<?= $stylesheet ?>.css">
+<?php endforeach ?>

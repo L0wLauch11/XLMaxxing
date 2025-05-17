@@ -2,6 +2,7 @@
     <label for="<?= $name ?>" class="input-descriptor"><?= tl($placeholderText) ?></label>
     <input
         type="<?= $type ?>" name="<?= $name ?>" id="<?= $name ?>"
+        class="input"
 
         placeholder="<?= tl($placeholderText) ?>"
         onfocus="this.placeholder=''"

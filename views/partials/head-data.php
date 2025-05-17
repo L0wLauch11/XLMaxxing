@@ -14,7 +14,8 @@ $stylesheetsCascading = [
     'components/xlfile',
     'components/subtext',
     'components/button',
-    'components/auth-form'
+    'components/auth-form',
+    'components/input',
 ];
 ?>
 

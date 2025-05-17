@@ -10,5 +10,7 @@ Router::get('/', 'views/templates/page.php');
 Router::get('/$pageName', 'views/templates/page.php');
 Router::get('/$pageName/$id', 'views/templates/page.php');
 
+Router::post('/search-xlfiles', 'views/search-xlfiles.php');
+
 Router::post('/auth/login', 'auth/login.php');
 Router::post('/auth/register', 'auth/register.php');

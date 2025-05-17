@@ -1,10 +1,10 @@
 <?php function sectionTitle() { ?>
-    <title>XLMaxxing &mdash; Login</title>
+    <title>XLMaxxing &mdash; Register</title>
 <?php } ?>
 
 <?php function sectionMain() { ?>
     <div class="container cotainer-auth-form">
-        <h1>Register</h1>
+        <h1><?= tl('Register') ?></h1>
         
         <form class="auth-form" action="/auth/login" method="post">
             <?= renderPartial('advanced-input', [

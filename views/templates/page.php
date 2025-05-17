@@ -25,9 +25,13 @@ require_once Env::ROOT."/views/$pageName.php";
         <ul>
             <li><a href="/" style="text-decoration: none;"><h1>XLMaxxing</h1></a></li>
             <li>
+                <form class="search-bar" action="/search" method="post">
+                    <input class="input" type="text" name="search" id="search" placeholder="<?= tl('Search') ?>">
+                </form>
+            </li>
+            <li>
                 <a class="login button" href="/login">
-                    <img src="/assets/img/icons/key.svg" alt="">
-                    <span><?= tl('Login') ?></span>
+                    <img src="/assets/img/icons/key.svg" alt=""><span><?= tl('Login') ?></span>
                 </a>
             </li>
         </ul>

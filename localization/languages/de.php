@@ -4,6 +4,8 @@ return [
     'German' => 'Deutsch',
     'English' => 'Englisch',
 
+    'Search' => 'Suchen',
+
     // Register/Login Pages
     'Register' => 'Registrieren',
     'Login' => 'Einloggen',

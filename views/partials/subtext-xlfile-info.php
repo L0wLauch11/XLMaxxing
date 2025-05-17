@@ -8,14 +8,14 @@ $compactViewClass = $compactView ? ' subtext-compact' : '';
 
 <p class="subtext<?= $compactViewClass ?>">
     <img class="subtext-icon<?= $compactViewClass ?>" src="/assets/img/icons/language.svg" alt="" srcset="">
-    <?= $xlfileLanguage['name'] ?>
+    <?= tl($xlfileLanguage['name']) ?>
     &middot;
     <span class="<?= $compactViewClass ?>">
         <img class="subtext-icon<?= $compactViewClass ?>" src="/assets/img/icons/document.svg" alt="" srcset="">
         <?php if ($compactView): ?>
             <?= $supportedSoftware['name'] ?>
         <?php else: ?>
-            <a href="<?= $supportedSoftware['url'] ?>">
+            <a href="<?= $supportedSoftware['url'] ?>" target="_blank">
                 <?= $supportedSoftware['name'] ?>
             </a>
         <?php endif ?>

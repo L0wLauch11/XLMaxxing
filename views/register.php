@@ -28,7 +28,9 @@
             <button type="submit" class="button button-submit">Register</button><br>
         </form>
 
-        <span class="subtext">Already have an account? <a href="/login">Login here.</a></span>
+        <span class="subtext">
+            <?= tl('Already have an account?'); ?>
+            <a href="/login"><?= tl('Login here.'); ?></a>
+        </span>
     </div>
-    
 <?php } ?>

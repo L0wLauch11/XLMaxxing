@@ -21,10 +21,9 @@ body {
 }
 
 main {
-    max-width: 1392px;
     display: block;
     margin: 0 auto;
-    padding: 0 32px;
+    padding: 0 16px;
 }
 
 a {

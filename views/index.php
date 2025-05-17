@@ -2,7 +2,6 @@
     <title>XLMaxxing</title>
 <?php } ?>
 
-
 <?php function sectionMain() { ?>
     <div class="xlfiles-grid">
         <?php $xlfiles = DatabaseOperations::select('xlfiles'); ?>

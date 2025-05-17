@@ -1,6 +1,9 @@
 <?php
 
-function renderPartial(string $partialName, array $passedVariables = []) {
+/**
+ * Renders a partial view from `views/partials/`
+ */
+function renderPartial(string $partialName, array $passedVariables = []): string {
     ob_start();
     
     extract($passedVariables);

@@ -1,12 +1,13 @@
 .xlfiles-grid {
     text-align: center;
+    margin-top: 24px;
 }
 
 .xlfiles-grid-entry {
     display: inline-block;
     text-align: left;
     padding: 0px;
-    margin: 12px;
+    margin: 15px;
     width: 280px;
     height: 250px;
     background-color: var(--color-foreground);

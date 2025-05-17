@@ -47,7 +47,7 @@ $page->passProps(
                 download="<?= $xlfile['name']; ?>.<?= $spreadsheetExtension; ?>"
                 class="button"
             >
-            Download <?= "{$xlfile['name']}.$spreadsheetExtension"; ?>
+            Download <b><?= "{$xlfile['name']}.$spreadsheetExtension"; ?></b>
             </a>
         <?php endforeach; ?>
     </div>

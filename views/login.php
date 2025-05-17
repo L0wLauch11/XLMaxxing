@@ -22,7 +22,9 @@
             <button type="submit" class="button button-submit">Login</button><br>
         </form>
 
-        <span class="subtext">Don't have an account? <a href="/register">Register here.</a></span>
+        <span class="subtext">
+            <?= tl('Don\'t have an account?'); ?>
+            <a href="/register"><?= tl('Register here.'); ?></a>
+        </span>
     </div>
-    
 <?php } ?>

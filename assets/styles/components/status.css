@@ -1,0 +1,39 @@
+.status-error {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    padding-left: 34px;
+    
+    outline: var(--default-outline);
+    outline-width: 2px;
+    outline-color: #f080808d;
+    background-color: #f0808048;
+    color: #f08080;
+    margin-bottom: 5px;
+
+    background-image: url('/assets/img/icons/error.svg');
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 5px;
+}
+
+.status-success {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    padding-left: 34px;
+    
+    outline: var(--default-outline);
+    outline-width: 2px;
+    outline-color:rgba(144, 238, 144, 0.515);
+    background-color: rgba(144, 238, 144, 0.304);
+    color: lightgreen;
+    margin-bottom: 5px;
+
+    background-image: url('/assets/img/icons/success.svg');
+    background-repeat: no-repeat;
+    background-position-x: 6px;
+    background-position-y: 5px;
+}

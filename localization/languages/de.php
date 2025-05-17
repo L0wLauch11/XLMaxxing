@@ -23,4 +23,8 @@ return [
 
     'Already have an account?' => 'Hast du bereits einen Benutzer?',
     'Login here.' => 'Logge dich hier ein.',
+
+    'Invalid Password!' => 'Ungültiges Passwort!',
+    'Invalid Username!' => 'Ungültiger Benutzername!',
+    'Login Successful!' => 'Einloggen erfolgreich!',
 ];

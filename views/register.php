@@ -6,7 +6,7 @@
     <div class="container cotainer-auth-form">
         <h1><?= tl('Register') ?></h1>
         
-        <form class="auth-form" action="/auth/login" method="post">
+        <form class="auth-form" action="/auth/register" method="post">
             <?= renderPartial('advanced-input', [
                 'name' => 'email',
                 'type' => 'text',

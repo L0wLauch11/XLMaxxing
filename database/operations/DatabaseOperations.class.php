@@ -2,9 +2,19 @@
 class DatabaseOperations {
     private static $databaseFolder = Env::ROOT."/database";
 
+    public static function createDatabaseConnection(string $databaseFileName) {
+        $databaseFolder = self::$databaseFolder;
+        return new SQLite3("$databaseFolder/$databaseFileName", SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+    }
+
+    public static function createPDOConnection(string $databaseFileName) {
+        $databaseFolder = self::$databaseFolder;
+        return new PDO("sqlite:$databaseFolder/$databaseFileName");
+    }
+
     private static function executeOperation(string $type, string $operationName, array $stringArguments) : array {
         $databaseFolder = self::$databaseFolder;
-        $database = new SQLite3("$databaseFolder/".Env::DATABASE_FILE, SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+        $database = self::createDatabaseConnection(Env::DATABASE_FILE);
 
         switch ($type) {
             case 'select':

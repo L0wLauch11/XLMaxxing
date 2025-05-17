@@ -1,3 +1,5 @@
+<?php global $auth; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +8,26 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <?php print_r($auth); ?>
     Register ->
-    <?php print_r($_POST) ?>
+    <?php
+    try {
+        $userId = $auth->registerWithUniqueUsername($_POST['email'], $_POST['password'], $_POST['username']);
+        echo 'We have signed up a new user with the ID ' . $userId;
+    }
+    catch (\Delight\Auth\InvalidEmailException $e) {
+        die('Invalid email address');
+    }
+    catch (\Delight\Auth\InvalidPasswordException $e) {
+        die('Invalid password');
+    }
+    catch (\Delight\Auth\UserAlreadyExistsException $e) {
+        die('User already exists');
+    }
+    catch (\Delight\Auth\TooManyRequestsException $e) {
+        die('Too many requests');
+    }
+    ?>
 </body>
 </html>

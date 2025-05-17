@@ -18,6 +18,7 @@ $stylesheetsCascading = [
     'components/input',
     'components/screenshot',
     'components/spacer',
+    'components/status',
 ];
 ?>
 

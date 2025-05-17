@@ -2,7 +2,13 @@
     <title>XLMaxxing</title>
 <?php } ?>
 
-<?php function sectionMain() { ?>
+<?php function sectionMain() {
+    $loginCallback = $_GET['login_callback'] ?? '';
+    ?>
+    <?php if ($loginCallback == 'success'): ?>
+        <p class="status-success"><?= tl('Login Successful!') ?></p>
+    <?php endif ?>
+
     <div class="xlfiles-grid">
         <?php $xlfiles = DatabaseOperations::select('xlfiles') ?>
         <?php foreach ($xlfiles as $xlfile): ?>

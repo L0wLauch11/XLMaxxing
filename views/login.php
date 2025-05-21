@@ -9,18 +9,20 @@
         <h1><?= tl('Login') ?></h1>
         
         <form class="auth-form" action="/auth/login" method="post">
-            <?php if ($loginCallback == 'invalid_username'): ?>
-                <p class="status-error"><?= tl('Invalid Username!') ?></p>
-            <?php endif ?>
+            <?= renderPartial('login-callback', [
+                'loginCallback' => $loginCallback,
+                'checkMatches' => ['invalid_username'],
+            ]) ?>
             <?= renderPartial('advanced-input', [
                 'name' => 'username',
                 'type' => 'text',
                 'placeholderText' => 'Username',
             ]) ?>
 
-            <?php if ($loginCallback == 'invalid_password'): ?>
-                <p class="status-error"><?= tl('Invalid Password!') ?></p>
-            <?php endif ?>
+            <?= renderPartial('login-callback', [
+                'loginCallback' => $loginCallback,
+                'checkMatches' => ['invalid_password'],
+            ]) ?>
             <?= renderPartial('advanced-input', [
                 'name' => 'password',
                 'type' => 'password',

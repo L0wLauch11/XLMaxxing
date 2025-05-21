@@ -5,9 +5,11 @@
 <?php function sectionMain() {
     $loginCallback = $_GET['login_callback'] ?? '';
     ?>
-    <?php if ($loginCallback == 'success'): ?>
-        <p class="status-success"><?= tl('Login Successful!') ?></p>
-    <?php endif ?>
+    
+    <?= renderPartial('login-callback', [
+        'loginCallback' => $loginCallback,
+        'checkMatches' => ['success']
+    ]) ?>
 
     <div class="xlfiles-grid">
         <?php $xlfiles = DatabaseOperations::select('xlfiles') ?>

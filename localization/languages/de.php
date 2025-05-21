@@ -5,8 +5,9 @@ return [
     'German' => 'Deutsch',
     'English' => 'Englisch',
 
-    // Search bar
+    // Header
     'Search' => 'Suchen',
+    'Welcome' => 'Willkommen',
 
     // xlfile page
     'Description' => 'Beschreibung',
@@ -24,7 +25,11 @@ return [
     'Already have an account?' => 'Hast du bereits einen Benutzer?',
     'Login here.' => 'Logge dich hier ein.',
 
-    'Invalid Password!' => 'Ungültiges Passwort!',
+    'Wrong Password!' => 'Falches Passwort!',
     'Invalid Username!' => 'Ungültiger Benutzername!',
     'Login Successful!' => 'Einloggen erfolgreich!',
+    'Logout Successful!' => 'Ausloggen erfolgreich!',
+    'Too Many Requests!' => 'Zu viele Anfragen!',
+    'User Already Exists!' => 'Benutzer existiert bereits!',
+    'Invalid E-Mail!' => 'Ungültige E-Mail!'
 ];
